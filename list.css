@@ -1,0 +1,122 @@
+body{
+    background-image: url('imgs/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card{
+    
+    width:500px;
+    min-height: 190px;
+    height: fit-content;
+    background-color: white;
+    margin: 150px auto;
+    /*add a 150-pixel margin to the top and bottom of the element,
+    and automatically adjust the left and right margins to center the element horizontally.*/
+    border-radius: 30px;
+    padding :30px;
+
+}
+
+/*___________Name&&logo_________________________*/
+h1{
+    color: rgb(142, 95, 38);
+}
+h1 img{
+    height: 30px;
+    
+}
+/*___________AddYourTask && button_____________*/
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    outline: 2px groove black;
+    border:none;
+    border-radius: 20px;
+    
+    box-shadow: 0 0 10px rgb(73, 63, 44);
+}
+input{
+    border:none;
+    outline: none;
+    background-color: transparent;
+
+    font-size: 18px;
+    letter-spacing: 1px;
+
+    padding:10px;
+    width: 350px;
+}
+input::placeholder{
+    color:rgb(223, 182, 122);
+}
+button{
+    border:none;
+    outline: none;
+    padding: 16px 30px;
+    cursor: pointer;
+    background-color: rgb(142, 95, 38);
+    color: azure;
+    border-radius:20px ;
+    margin: 1px;
+}
+/*________________Tasks____________________*/
+ul li{
+    list-style: none;
+    font-size:20px ;
+    letter-spacing:1px ;
+    padding : 12px 8px 12px 50px; /*top right bottom left*/ 
+    margin-block: 10px; 
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    background-image: url('imgs/unchecked.png');
+    background-size: cover;
+    left:8px;
+    top:10px;
+}
+ul li span{
+    position: absolute;
+    top:10px;
+    right: 0px;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    color: black;
+    text-align: center;
+    border-radius: 50%;
+    }
+ul li span:hover{
+        background-color: rgb(142, 95, 38); ;
+        color: aliceblue;
+}
+/*____________________________________*/
+ul li.checked{
+    background-color:  rgb(142, 95, 38); ;
+    color: azure;
+    border-radius:30px ;
+}
+ul li.checked::before{
+    background-image: url(imgs/checked.png);
+    background-size: cover;
+}
+
+ul li.checked span{
+    color: aliceblue;
+}
+ul li.checked span:hover{
+    background-color: white;
+    color: rgb(142, 95, 38); ;;
+}
+
+
+
